@@ -2,7 +2,6 @@ using DataFrames
 using CSV
 using Chain
 using Plots
-using Dates
 
 
 function getAndReadCovidData(url::String, filename::String)
