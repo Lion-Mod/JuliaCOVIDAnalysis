@@ -1,7 +1,5 @@
-using DataFrames:columns
 using DataFrames
 using CSV
-using Missings
 using Chain
 using Plots
 using Dates
@@ -21,7 +19,7 @@ function renameColumns(df::DataFrame)
     end
 end
 
-function getUSData(df::DataFrame)
+function filterToAndPivotUSData(df::DataFrame)
     return @chain df begin
         filter(col -> col.country == "US", _)[:, 5:end]
         stack(_, names(_))
@@ -32,7 +30,7 @@ url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_cov
 
 data = getAndReadCovidData(url, "covid_data.csv");
 tidy_data = renameColumns(data)
-US_data = getUSData(tidy_data)
+US_data = filterToAndPivotUSData(tidy_data)
 
 
 # Plot on log scale
