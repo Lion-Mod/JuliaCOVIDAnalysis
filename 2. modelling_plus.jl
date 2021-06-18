@@ -14,6 +14,7 @@ p = 0.01 # Probability of infecting each person
 
 # Think of (pα(N - Iₙ)) as rate of infection
 # β = pα(N - Iₙ)
+# αN = Number of contacts
 
 I₀ = 1
 β(S) = p * α * S
@@ -37,4 +38,4 @@ results = logisticModel(100)
 
 plot(log.(results), label = "Logistic model", legend = :topleft)
 xlabel!("day")
-ylabel!("log(x)")
+ylabel!("log(result)")

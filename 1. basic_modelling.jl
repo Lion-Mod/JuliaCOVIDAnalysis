@@ -14,13 +14,14 @@ I₀ = 1
 S₀ = N - 1
 
 # GROWTH RATE
+# c = number of people that one person infects
 c = 0.01
 λ = 1 + c
 
 # MODEL
-# Iₙ₊₁ = λ * Iₙ
+# Iₙ₊₁ = λIₙ
 
-function basicModel(days::Int64)
+function run_basic_model(days::Int64)
     # Create empty array of length days and set first entry as 1
     I = zeros(days)
     I[1] = I₀
@@ -35,9 +36,9 @@ function basicModel(days::Int64)
 end
 
 # Run the model and store the results
-one_hundred_days = basicModel(100)
+one_hundred_days = run_basic_model(100)
 
 # Plot the results
 plot(log.(one_thousand_days), label = "I(n)", legend = :topleft)
 xlabel!("day")
-ylabel!("log(x)")
+ylabel!("log(result)")
