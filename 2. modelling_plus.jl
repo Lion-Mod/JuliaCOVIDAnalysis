@@ -19,7 +19,7 @@ p = 0.01 # Probability of infecting each person
 I₀ = 1
 β(S) = p * α * S
 
-function logisticModel(days::Int64)
+function run_logistic_model(days::Int64)
     # Create empty array of length days and set first entry as 1
     I = zeros(days)
     I[1] = I₀
@@ -34,7 +34,7 @@ function logisticModel(days::Int64)
 end
 
 # Run the model and store the results
-results = logisticModel(100)
+results = run_logistic_model(100)
 
 plot(log.(results), label = "Logistic model", legend = :topleft)
 xlabel!("day")
