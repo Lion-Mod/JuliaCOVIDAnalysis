@@ -25,7 +25,7 @@ function filter_to_and_pivot_US_data(df::DataFrame)
     end
 end
 
-url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv";
 
 data = get_and_read_COVID_data(url, "covid_data.csv");
 tidy_data = rename_columns(data)
