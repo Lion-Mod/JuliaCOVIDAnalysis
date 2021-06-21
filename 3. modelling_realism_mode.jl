@@ -4,7 +4,7 @@ using Plots
 
 
 N = 100 # Total population
-I₀ = 1
+I₀ = 1 # Initial infected people
 
 function run_realistic_model(days::Int64, c_average = 1.1)
     # Create empty array of length days and set first entry as 1

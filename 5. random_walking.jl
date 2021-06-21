@@ -7,7 +7,7 @@ using StatsBase
 # A jump is like a dot moving right or left on a line.
 jump() = rand((-1, +1))
 
-# 
+
 function random_walk(number_of_time_steps)
     position = 0
     positions = [position]

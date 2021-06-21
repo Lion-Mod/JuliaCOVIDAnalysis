@@ -10,8 +10,8 @@ using Plots
 
 # INITIAL CONDITIONS ("start time" or n = 0)
 # N =
-I₀ = 1
-S₀ = N - 1
+I₀ = 1 # Initial infected people
+S₀ = N - 1 # Initial suseptible people
 
 # GROWTH RATE
 # c = number of people that one person infects

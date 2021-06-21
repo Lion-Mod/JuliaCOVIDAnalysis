@@ -2,7 +2,7 @@
 """
 Idea is there are two separate walkers (see 5. random_walking), discrete (moves -1 or 1) or continuous (moves continuously).
 
-These can form one abstract type RandomWalker which creates the type hierarchy.
+These feed into one abstract type RandomWalker which creates the type hierarchy.
 
 Then from this you restrict function calls to certain types.
 """

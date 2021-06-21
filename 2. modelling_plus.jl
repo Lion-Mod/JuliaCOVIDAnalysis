@@ -16,7 +16,7 @@ p = 0.01 # Probability of infecting each person
 # β = pα(N - Iₙ)
 # αN = Number of contacts
 
-I₀ = 1
+I₀ = 1 # Initial infected people
 β(S) = p * α * S
 
 function run_logistic_model(days::Int64)
