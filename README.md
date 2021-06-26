@@ -1,2 +1,2 @@
 # JuliaCOVIDAnalysis
- Modelling COVID analysis in Julia to understand Julia.
+Learning basic modelling techniques based around COVID.
